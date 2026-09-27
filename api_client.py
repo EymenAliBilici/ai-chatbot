@@ -49,5 +49,5 @@ if __name__ == "__main__":
     result = api.delete_chat(session_id="606b42d0-1f0f-46e2-8fcd-cc80f32a66ea")
     result = api.get_messages(session_id="606b42d0-1f0f-46e2-8fcd-cc80f32a66ea")
     # example question to LLM
-    result = api.chat(session_id="606b42d0-1f0f-46e2-8fcd-cc80f32a66ea" , query="What are the best German Engineered Cars That offer best comfort and luxury within the budget of €100.000 to €120.000 ? ")
+    result = api.chat(session_id="606b42d0-1f0f-46e2-8fcd-cc80f32a66ea" , query="example question")
     print(result)

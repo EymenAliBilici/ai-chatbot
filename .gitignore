@@ -29,6 +29,7 @@ ENV/
 env.bak/
 venv.bak/
 streamlit_env/
+chroma/db
 build/
 dist/
 *.egg-info/
@@ -42,3 +43,4 @@ dist/
 .streamlit/secrets.toml
 .ipynb_checkpoints
 *.ipynb_checkpoints/
+college-de-saussure-enjeux-ai.pdf

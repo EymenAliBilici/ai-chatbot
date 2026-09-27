@@ -341,13 +341,23 @@ class Structure:
             """
 
             cursor.execute(query , (session_id,)) 
+            
+            query2 = """
+                DELETE FROM messages
+                WHERE session_id = %s
+            """
+
+            cursor.execute(query2 , (session_id,)) 
+            
             conn.commit()
             return "Chat Successfully deleted !"
 
         except pymysql.Error as e:
+            conn.rollback()
             return f"An Error Occurred From MySQL Server  --->>  {e}"
 
         except Exception as e:
+            conn.rollback()
             return f"An Error Occurred  --->>  {e}"
 
         finally:

@@ -4,10 +4,13 @@
 
 ## ✨ Features
 
+- 🧠 Intelligent Router (RAG / Chat auto-detection)
+- 📄 RAG (Document-based Q&A)
 - 🚀 Gemini models support 
 - 🐍 FastAPI support
 - 🔗 LangChain Integration
 - 🗄️ MySQL Database
+- 📊 ChromaDB Vector Store
 - ⚡ Performance 
 - 🔐 API key Security 
 
@@ -18,6 +21,8 @@
 | **Language** | Python 3.10+ |
 | **AI Model** | Gemini Models |
 | **Framework** | LangChain |
+| **Vector Store** | ChromaDB |
+| **Embeddings** | Google Generative AI Embeddings |
 | **API** | FastAPI |
 | **Database** | MySQL |
 | **Validation** | Pydantic |
@@ -32,6 +37,20 @@
 3. Click **"Create API Key"**
 4. Copy the generated key
 5. Paste it into your `.env` file 
+
+
+## 🗄️ Getting MySQL Database
+
+### 1. Visit [MySQL](https://www.mysql.com) and install the package
+
+### 2. Get your MySQL database information and paste it into the .env
+
+### 3. Create your database
+
+```sql
+CREATE DATABASE your_database_name;
+```
+
 
 ## 📦 Installation
 
@@ -102,29 +121,47 @@ project/
 ├── main.py                 # for run the app on terminal
 ├── api.py                  # FastAPI service
 ├── config.py               # It's doing return .env datas to python datas (with load=dotenv) 
-├── test_ai.py              # For test Genai models , you can run this file before run the project
+├── test_ai.py              # For test Genai models , you can run this file before run the main file
 ├── api_client.py           # It's taking the responses from API
 ├── chatbot.py              # the main file , It have the chatbot structure
+├── test_vector_db.py       # It's for test the vector DB
+├── vector_db.py            # It's for create a vector DB and add document into the vector DB
+├── document_summariser.py  # It's for Summarise the uploaded document for router chain
+├── your_pdf.pdf            # This is your pdf for RAG system
 ├── requirements.txt
 ├── .env.example
 ├── .env
 ├── .gitignore
-└── README.md
-└── LICENSE
+├── README.md
+├── rag.md
+├── LICENSE
+└── chroma/                 # Auto-generated after RAG upload
+    └── db/
 ```
+
+
+## 📄 How Does RAG works ? 
+
+Look at -> [rag.md](rag.md)
+
 
 ## 🗺️ Roadmap
 
  - [✅] basic chain
  - [✅] MySQL database
  - [✅] FastAPI service
+ - [✅] RAG
  - [❌] GUI
  - [❌] LangGraph
- - [❌] RAG
+ - [❌] LangSmith
+ - [❌] FAISS
+ - [❌] Agents
+ - [❌] Intermediate RAG
+
  
 ## 📄 LICENSE
 
-This Project have MIT license  ,  You can refer to [LICENSE](LICENSE) for details.
+This project is licensed under the MIT License ,  You can refer to [LICENSE](LICENSE) for details.
 
 ## 👤 Developer
 
@@ -144,3 +181,4 @@ If you like this project please don't forget give the ⭐ , thanks.
  - [LangChain](https://www.langchain.com/)
  - [MySQL](https://www.mysql.com/)
  - [FastAPI](https://fastapi.tiangolo.com/)
+ - [ChromaDB](https://www.trychroma.com/)

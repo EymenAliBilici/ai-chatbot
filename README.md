@@ -140,7 +140,7 @@ project/
 ```
 
 
-## 📄 How Does RAG works ? 
+## 📄 How Does RAG work ? 
 
 Look at -> [rag.md](rag.md)
 
